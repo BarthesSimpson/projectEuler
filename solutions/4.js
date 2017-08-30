@@ -8,12 +8,15 @@ function largestPalindrome(digits) {
     const max = getMax(digits)
     let maxPal = 0
     for (let i = max; i > 99; i--) {
+        // optimization: break outer loop if we can no longer beat maxPal
+        if (i < maxPal / max) break
         // optimization: skip multiples of 10 since they can't be palindromes!
         if (i % 10 === 0) continue
         for (let j = i; j > 99; j--) {
             const prod = i * j
-            // optimization: put the expensive operation after the &&!
-            if (prod > maxPal && isPalindrome(prod)) {
+            // optimization: break inner loop if we can no longer beat maxPal
+            if (prod < maxPal) break
+            if (isPalindrome(prod)) {
                 maxPal = prod
             }
         }
@@ -25,7 +28,7 @@ function getMax(digits) {
     if (digits < 2) {
         throw new Error('Please enter a number greater than 1')
     }
-    if (digits > 4) {
+    if (digits > 5) {
         throw new Error(
             'Sorry, my algorithm is too stupid to do that in a reasonable amount of time'
         )
@@ -42,4 +45,6 @@ function isPalindrome(number) {
     return str === Array.from(str).reverse().join('')
 }
 
-console.log(largestPalindrome(3))
+// console.time('lp')
+console.log(largestPalindrome(5))
+// console.timeEnd('lp')
