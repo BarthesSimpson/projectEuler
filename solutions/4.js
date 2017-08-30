@@ -3,7 +3,7 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 */
 
-// This is a crappy O(n!) algorithm with a couple of optimizations so I don't feel completely worthless
+// This is just a crappy O(n^2) algorithm with a couple of optimizations 
 function largestPalindrome(digits) {
     const max = getMax(digits)
     let maxPal = 0

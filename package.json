@@ -1,0 +1,22 @@
+{
+  "name": "projecteuler",
+  "version": "1.0.0",
+  "description": "[Project Euler](https://projecteuler.net) has a bunch of math problems that I plan to tackle in my (endangered, possibly extinct) spare time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine **/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarthesSimpson/projectEuler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarthesSimpson/projectEuler/issues"
+  },
+  "homepage": "https://github.com/BarthesSimpson/projectEuler#readme",
+  "devDependencies": {
+    "jasmine": "^2.8.0"
+  }
+}
