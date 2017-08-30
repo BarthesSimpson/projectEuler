@@ -42,4 +42,4 @@ function isPalindrome(number) {
     return str === Array.from(str).reverse().join('')
 }
 
-console.log(largestPalindrome(4))
+console.log(largestPalindrome(3))
