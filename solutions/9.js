@@ -16,7 +16,6 @@ Find the product abc.
 
 const intArray = require('../helpers/intArray')
 
-
 function pythagoreanTriplet(target) {
   for (let a = 1; a <= target; a++) {
     for (let b = a + 1; b <= target; b++) {
