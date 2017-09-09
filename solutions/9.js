@@ -27,7 +27,7 @@ function pythagoreanTriplet(target) {
         const c = squares[k]
         const sum = i + j + k + 3
         if ((a + b === c) && sum === target) {
-          return (i+1) * (j+1) * (k+1)
+          return (i + 1) * (j + 1) * (k + 1)
         }
         if (sum > target) {
           break
@@ -37,4 +37,23 @@ function pythagoreanTriplet(target) {
   }
 }
 
+function pythagoreanTripletAlt(target)
+for (let a = 1; a <= target; a++) {
+  for (let b = a + 1; b <= target; b++) {
+    let c = Math.sqrt(Math.pow(a, 2) + (Math.pow(b, 2)))
+    if ((c % 1 === 0) && (a + b + c === 1000)) {
+      return a * b * c
+      break
+    }
+  }
+}
+
 console.log(pythagoreanTriplet(1000))
+
+console.time('naive')
+pythagoreanTriplet(1000)
+console.timeEnd('naive')
+
+console.time('alt')
+pythagoreanTripletAlt(1000)
+console.timeEnd('alt')
