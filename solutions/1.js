@@ -3,13 +3,13 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 Find the sum of all the multiples of 3 or 5 below 1000.
 */
 
+const intArray = require('../helpers/intArray')
+
 // Construct an array of all numbers below the ceiling
 // Then filter the values that are multiples of the supplied list
 // Finally, sum these values
 function sumOfMultiples(multiples, ceiling) {
-    return Array(ceiling)
-        .fill()
-        .map((_, i) => i)
+    return intArray(ceiling)
         .filter(i => {
             for (let m of multiples) {
                 if (i % m === 0) {
