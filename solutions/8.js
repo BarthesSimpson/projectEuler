@@ -48,6 +48,6 @@ const input = "73167176531330624919225119674426574742355349194934969835203127745
 
 console.log(maxProduct(input, 13))
 
-console.time('j')
-maxProduct(input, 13)
-console.timeEnd('j')
+// console.time('maxProduct')
+// maxProduct(input, 13)
+// console.timeEnd('maxProduct')
