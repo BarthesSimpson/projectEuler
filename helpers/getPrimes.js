@@ -1,6 +1,6 @@
 /* Uses the seive of Eratosthenes to get all primes between any two integers > 1
 (ceil is exclusive, floor is inclusive) */
-module.exports = (ceil, floor = 1) => {
+module.exports = (ceil, floor = 2) => {
     const arr = Array(ceil).fill(true)
     for (let i = 2; i <= Math.sqrt(ceil); i++) {
         if (i) {
