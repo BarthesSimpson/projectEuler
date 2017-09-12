@@ -27,8 +27,7 @@ function highlyDivisibleTriangularNumber(divisors) {
   let i = 1
   let n = 1
   while (countDivisors(n) <= divisors) {
-    i++
-    n += i
+    n += ++i
   }
   return n
 }
