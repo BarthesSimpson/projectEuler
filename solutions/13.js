@@ -122,7 +122,6 @@ function largeSum(matrix) {
       // now we are down the last (i.e. first!) digit, so let's 
       // sum it and take the first 10 digits, which will be the 
       // first 10 digits of the entire sum
-      console.log({ sum })
       return sum.toString().slice(0, 11).replace('.', '')
     }
   }, [])
