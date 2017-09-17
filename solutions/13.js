@@ -104,8 +104,6 @@
 
 // Split each number by digit, and join into an array
 // Then recursively sum from smallest digit to largest
-// (p.s I solved this at the first attempt and feel 
-// pretty good about it!)
 
 const rotateMatrix = require('../helpers/rotateMatrix')
 
