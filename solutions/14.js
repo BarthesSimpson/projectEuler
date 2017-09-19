@@ -18,24 +18,24 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 // just brute force it with a bit of DP for efficiency.
 
 function longestCollatz(limit) {
-  const chainLengths = { 1: 1 };
+  const chainLengths = { 1: 1 }
   for (let i = 2; i < limit; i++) {
-    let num = i;
-    let count = 0;
-    let n = num;
+    let num = i
+    let count = 0
+    let n = num
     while (!chainLengths.hasOwnProperty(n)) {
-      count++;
+      count++
       if (n % 2 === 0) {
-        n /= 2;
+        n /= 2
       } else {
-        n = 3 * n + 1;
+        n = 3 * n + 1
       }
     }
-    chainLengths[num] = count + chainLengths[n];
+    chainLengths[num] = count + chainLengths[n]
   }
   return Object.keys(chainLengths).reduce(
     (l, r) => (chainLengths[r] > chainLengths[l] ? r : l)
-  );
+  )
 }
 
-console.log(longestCollatz(1e6));
+console.log(longestCollatz(1e6))
