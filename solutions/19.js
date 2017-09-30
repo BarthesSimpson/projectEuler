@@ -16,16 +16,9 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 // A solution from scratch would be pretty easy, but pointless.
 
 let date = new Date(1901, 0, 1)
-// date.setFullYear(1901)
-// date.setMonth(0)
-// date.setDate(1)
-
 let endDate = new Date(2000, 11, 2)
-// endDate.setFullYear(2000)
-// endDate.setMonth(11)
-// endDate.setDate(2)
-
 let count = 0
+
 while (date < endDate) {
   if (date.getDay() === 0) {
     count++
