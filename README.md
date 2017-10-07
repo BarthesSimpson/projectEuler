@@ -1,6 +1,6 @@
 # Project Euler Solutions (ES6)
 
-[Project Euler](https://projecteuler.net) has a bunch of math problems that I plan to tackle in my (endangered, possibly extinct) spare time.
+[Project Euler](https://projecteuler.net) has a bunch of math problems that I plan to tackle in my (endangered, possibly extinct) spare time. They are easier to solve in python, but I decided to take them on in ES6 for an added challenge.
 
 ## Getting Started
 
