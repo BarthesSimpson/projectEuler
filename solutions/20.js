@@ -19,16 +19,9 @@ function sumDigitsFactorial(n) {
   let currentFactorial = [2]
   while (currentDigit < n + 1) {
     multiplier = Array.from(currentDigit.toString()).map(i => parseInt(i))
-    console.log({ multiplier })
     currentFactorial = multiplyTwoBigNumbers(currentFactorial, multiplier)
-    console.log(currentFactorial.map(n => n.toString()).join(''))
     currentDigit++
   }
-  // require('fs').writeFileSync(
-  //   'output.txt',
-  //   currentFactorial.map(n => n.toString()).join('')
-  // )
-  // console.log(currentFactorial.map(n => n.toString()).join(''))
   return sumDigits(currentFactorial)
 }
-console.log(sumDigitsFactorial(12))
+console.log(sumDigitsFactorial(100))

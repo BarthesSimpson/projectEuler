@@ -1,4 +1,4 @@
-// 13! calculates incorrectly. There is some weird edge case here...
+// 13! calculates incorrectly. The problem is in the zeros padding
 
 const transpose = require('./transpose')
 
@@ -43,37 +43,40 @@ module.exports = (m, n) => {
       }
     }
   }
-
+  //shift the rows by powers of ten
+  const shifted = matrix.map((r, i) => r.concat(Array(i).fill(0)))
   //add padding to line up the digits
-  for (let i = 0; i < matrix.length; i++) {
-    let padding = Array(matrix.length - 1 - i).fill(0)
-    matrix[i] = padding.concat(matrix[i])
-  }
-
+  const len = shifted.map(r => r.length).reduce((l, r) => Math.max(l, r), 0)
+  const padded = shifted.map(r => {
+    return Array(len - r.length)
+      .fill(0)
+      .concat(r)
+  })
   //place the columns in reverse order for summing
   //(and replace undefined values with zeros)
-  const columns = transpose(matrix)
+  const columns = transpose(padded)
     .map(c => c.map(i => (i ? i : 0)))
     .reverse()
   //now, for the final step we compress the matrix
   //by summing each column (and carrying as required)
-  const len = columns.length
+  const cols = columns.length
   const solution = columns
     .reduce((l, r, i) => {
       let sum = l[i] + r.reduce((a, b) => a + b, 0)
       if (sum < 10) {
         l[i] = sum
       } else {
-        if (i === len - 1) {
-          l = l.concat([0])
-          i++
-        }
         l[i] = sum % 10
-        l[i + 1] += Math.floor(sum / 10)
+        let carry = Math.floor(sum / 10)
+        i < cols - 1 ? (l[i + 1] = carry) : l.push(carry)
       }
       return l
-    }, Array(len).fill(0))
+    }, Array(cols).fill(0))
     .reverse()
-  console.log({ solution })
-  return solution
+  //then trim off any leading zeros
+  let trimmed = solution
+  while (trimmed[0] === 0) {
+    trimmed = trimmed.slice(1)
+  }
+  return trimmed
 }
