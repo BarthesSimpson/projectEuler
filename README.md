@@ -8,4 +8,4 @@ The solutions can be run using `node {/path/to/solution/}`. Helper functions hav
 
 ## Web Scraper
 
-I made a simple scraper to investigate the distribution of submitted answers. The file is `scraper/scrape.py`. If you want to run it, you need python3 and a few dependencies like beautifulsoup4 (which you need to install with pip3).
+I made a simple scraper to investigate the distribution of submitted answers, because I expected them to follow a power law. The file is `scraper/scrape.py`. If you want to run it, you need python3 and a few dependencies like beautifulsoup4 (which you need to install with pip3). The actual data is quite interesting: similar to what I expected, but with one significant quirk.
