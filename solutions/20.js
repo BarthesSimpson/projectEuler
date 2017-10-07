@@ -31,4 +31,4 @@ function sumDigitsFactorial(n) {
   // console.log(currentFactorial.map(n => n.toString()).join(''))
   return sumDigits(currentFactorial)
 }
-console.log(sumDigitsFactorial(100))
+console.log(sumDigitsFactorial(12))

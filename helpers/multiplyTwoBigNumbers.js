@@ -1,4 +1,4 @@
-// getting there, but not quite right yet!
+// 13! calculates incorrectly. There is some weird edge case here...
 
 const transpose = require('./transpose')
 
@@ -74,5 +74,6 @@ module.exports = (m, n) => {
       return l
     }, Array(len).fill(0))
     .reverse()
+  console.log({ solution })
   return solution
 }
