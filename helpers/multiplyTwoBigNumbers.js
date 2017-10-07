@@ -1,5 +1,3 @@
-// 13! calculates incorrectly. The problem is in the zeros padding
-
 const transpose = require('./transpose')
 
 // m and n must each be an array of single digits
