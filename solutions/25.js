@@ -22,6 +22,9 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 
 /**
  * Returns the index of the first Fibonacci number with n digits
+ * Should be performant due to fast Fibonacci calculation, but is
+ * actually kind of slow (c. 600ms) which suggests my array operation
+ * helper methods could stand to be optimized
  * @param {number} n - the desired number of digits
  * @returns {number} 
  */
@@ -35,7 +38,6 @@ function nDigitFib(n) {
   let i = 3
   let fib_i = [2]
   let fib_i_minus = [1]
-  // let lookahead = [i, fib_i, fib_i_minus]
 
   // First use fastFib to get close to our target
   while (fib_i.length < n) {
