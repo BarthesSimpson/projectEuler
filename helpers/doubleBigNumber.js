@@ -1,6 +1,7 @@
 // n must be an array of single digits
 module.exports = n => {
-  let arr = n.reverse()
+  // don't mutate input array!
+  let arr = [...n].reverse()
   let i = 0
   let carry = false
   while (i < arr.length - 1) {

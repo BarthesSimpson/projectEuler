@@ -2,22 +2,23 @@ const transpose = require('./transpose')
 
 // m and n must each be an array of single digits
 module.exports = (m, n) => {
-  //decide which is the smaller matrix
+  //decide which is the smaller array
   let arr1
   let arr2
+  //don't mutate input arrays!
   if (m.length > n.length) {
-    arr1 = m
-    arr2 = n
+    arr1 = [...m]
+    arr2 = [...n]
   } else {
-    arr1 = n
-    arr2 = m
+    arr1 = [...n]
+    arr2 = [...m]
   }
-  //construct an empty matrix for our long multiplication
+  //construct an empty 2d array for our long multiplication
   const matrix = Array(arr2.length)
   for (let i = 0; i < arr2.length; i++) {
     matrix[i] = Array(arr1.length).fill(0)
   }
-  //iterate through the smallest matrix,
+  //iterate through the smaller array,
   //performing each step of long multiplication
   for (let i = arr2.length - 1; i >= 0; i--) {
     for (let j = arr1.length - 1; j >= 0; j--) {
