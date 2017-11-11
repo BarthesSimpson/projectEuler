@@ -80,7 +80,5 @@ function fastFib(i, fib_i, fib_i_minus) {
   )
   return [(i - 1) * 2 + 1, fib_double_plus, fib_double]
 }
-console.time('fib')
-nDigitFib(1000)
-console.timeEnd('fib')
-// console.log(nDigitFib(1000))
+
+console.log(nDigitFib(1000))
