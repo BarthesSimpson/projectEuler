@@ -8,6 +8,14 @@ const intArray = require('../helpers/intArray')
 // Construct an array of all numbers below the ceiling
 // Then filter the values that are multiples of the supplied list
 // Finally, sum these values
+
+/**
+ * Sum all integers below a specified ceiling that are multiples of
+ * any of a given list of integers
+ * @param {number[]} multiples
+ * @param {number} ceiling
+ * @returns {number}
+ */
 function sumOfMultiples(multiples, ceiling) {
     return intArray(ceiling)
         .filter(i => {

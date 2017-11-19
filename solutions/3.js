@@ -5,6 +5,12 @@ What is the largest prime factor of the number 600851475143 ?
 
 // LPF of a number must be either the number itself or at most the sqrt of the number
 // So, here is a simple recursive approach
+/**
+ * Recursively find the largest prime factor of a number
+ * @param {number} val - the current candidate for LPF
+ * @param {number} divisor - a base divisor against which to test val for prime-ness
+ * @returns {number}
+ */
 function largestPrimeFactor(val, divisor = 2) { 
     
     // count up to the sqrt of the search value until we find a divisor
