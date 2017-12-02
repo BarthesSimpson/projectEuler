@@ -18,7 +18,7 @@ const intArray = require('../helpers/intArray')
 /**
  * Find the pythagorean triple that sums to a given number
  * @param {number} target - the sum we are aiming for
- * @returns {number|bool}
+ * @returns {number|bool} - returns false if no such Pythagorean triple exists
  */
 function pythagoreanTriplet(target) {
   for (let a = 1; a <= target; a++) {
