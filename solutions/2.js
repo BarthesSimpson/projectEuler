@@ -7,7 +7,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 // Generate fibonaccis up to the ceiling and tally the even ones
 
 /**
- * Sum the even fibonacci number up to a specified ceiling
+ * Sum the even fibonacci numbers up to a specified ceiling
  * @param {number} ceiling
  * @returns {number}
  */
