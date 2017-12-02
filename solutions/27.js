@@ -60,6 +60,6 @@ function isPrime(n) {
   return false
 }
 
-console.time('yay')
+// console.time('yay')
 console.log(productOfQuadraticCoefficients())
-console.timeEnd('yay')
+// console.timeEnd('yay')
