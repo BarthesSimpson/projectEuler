@@ -11,21 +11,24 @@ Find the product abc.
 // I don't know any smart tricks for this, except that Pythagorean triples
 // have the property a < b < c so we can stagger the nested loop
 // I thought about maybe using Fibonacci method to calculate a bunch of
-// Pythagorean triples and then testing them to see if they meet the 
+// Pythagorean triples and then testing them to see if they meet the
 // requirement, but I couldn't remember how to implement that method.
 
 const intArray = require('../helpers/intArray')
-
+/**
+ * Find the pythagorean triple that sums to a given number
+ * @param {number} target - the sum we are aiming for
+ * @returns {number|bool}
+ */
 function pythagoreanTriplet(target) {
   for (let a = 1; a <= target; a++) {
     for (let b = a + 1; b <= target; b++) {
-      let c = Math.sqrt(Math.pow(a, 2) + (Math.pow(b, 2)))
-      if ((c % 1 === 0) && (a + b + c === 1000)) {
+      let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2))
+      if (c % 1 === 0 && a + b + c === 1000) {
         return a * b * c
-        break
       }
     }
   }
+  return false
 }
-
 console.log(pythagoreanTriplet(1000))
