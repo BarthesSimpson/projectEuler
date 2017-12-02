@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/dfrenk/.platformio/penv/bin:/Users/dfrenk/.yarn/bin:~/anaconda/bin://anaconda/bin:/Users/dfrenk/anaconda/bin:/usr/local/bin/heroku:/Applications/Genymotion.app/Contents/MacOS/tools:/usr/local/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  }
+}
