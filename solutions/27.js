@@ -21,11 +21,14 @@ Find the product of the coefficients, a and b, for the quadratic expression that
  * starting with n=0
  * @returns {number}
  */
+const intArray = require('../helpers/intArray')
 function productOfQuadraticCoefficients() {
   let product = 0
   let maxPrimes = 0
-  for (let a = -999; a < 1000; a++) {
-    for (let b = -1000; b < 1001; b++) {
+  let linear = intArray(999, -999)
+  let constant = intArray(1000, -1000).filter(i => isPrime(i)) //since n=0 must give prime, b must always be prime
+  for (let a of linear) {
+    for (let b of constant) {
       let n = 0
       while (isPrime(n ** 2 + a * n + b)) {
         n++
@@ -57,6 +60,6 @@ function isPrime(n) {
   return false
 }
 
-// console.time('yay')
+console.time('yay')
 console.log(productOfQuadraticCoefficients())
-// console.timeEnd('yay')
+console.timeEnd('yay')
