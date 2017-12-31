@@ -17,9 +17,13 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 */
 
+/**
+ * Find the first triangle number to have over n divisors
+ * @param {number} divisors how many divisors the number should have
+ * @returns {number}
+ */
 // This is a brute force algorithm that just iterates triangular numbers
 // and checks how many factors they have
-
 const factorize = require('../helpers/factorize')
 const nChooseK = require('../helpers/nChooseK')
 
