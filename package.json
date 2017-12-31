@@ -18,5 +18,8 @@
   "homepage": "https://github.com/BarthesSimpson/projectEuler#readme",
   "devDependencies": {
     "jasmine": "^2.8.0"
+  },
+  "dependencies": {
+    "big.js": "^5.0.3"
   }
 }
