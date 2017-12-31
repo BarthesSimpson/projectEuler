@@ -31,6 +31,12 @@ const transpose = require('../helpers/partialSums')
 const getDiagonals = require('../helpers/getDiagonals')
 const maxProduct = require('./8.js')
 
+/**
+ * Find the greatest product of n adjacent numbers in a 2D matrix
+ * @param {[][]} matrix - the grid
+ * @param {number} len - the length over which to maximize adjacent sum
+ * @returns {number}
+ */
 function findMaxProduct(matrix, len) {
   const rowMax = matrix.map(r => maxProduct(r, len))
   const colMax = transpose(matrix).map(r => maxProduct(r, len))

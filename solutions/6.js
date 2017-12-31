@@ -9,13 +9,13 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 const intArray = require('../helpers/intArray')
 
-// Smart Solution
 /**
  * Find the difference between the sum of squares and the 
  * square of the sum of natural numbers up to a ceiling 
  * @param {number} ceil - ceiling of the range (inclusive)
  * @returns {number}
  */
+// Smart Solution
 function sumDiffSmart(ceil) {
     const sum = ceil * (ceil + 1) / 2
     const sumsq = (2 * ceil + 1) * (ceil + 1) * ceil / 6
