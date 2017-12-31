@@ -33,7 +33,7 @@ const maxProduct = require('./8.js')
 
 /**
  * Find the greatest product of n adjacent numbers in a 2D matrix
- * @param {[][]} matrix - the grid
+ * @param {[]number[]} matrix - the grid
  * @param {number} len - the length over which to maximize adjacent sum
  * @returns {number}
  */
