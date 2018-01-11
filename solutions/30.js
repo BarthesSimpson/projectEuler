@@ -18,7 +18,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers o
 
 function sumOfPentagonalNumbers() {
   let sum = 0
-  for (let i = 9; i < 6 * 9 ** 5; i++) {
+  for (let i = 1000; i < 6 * 9 ** 5; i++) {
     const sumFifth = Array.from(i.toString())
       .map(i => i ** 5)
       .reduce((a, b) => a + b, 0)
