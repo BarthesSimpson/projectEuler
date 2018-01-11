@@ -11,22 +11,14 @@ How many different ways can £2 be made using any number of coins?
 /**
  * Find all the ways a sum can be obtained by combining an array of values
  * aka the easiest knapsack problem
- * 
- * @param {Number} sum
- * @param {Number[]} values
- * 
+ *
+ * @param {Number} sum - target
+ * @param {Number[]} values - sorted from lowest to highest
+ *
  * @returns {Number} number of distinct ways of forming sum from values
  */
 function easyKnapsack(sum, values) {
-  let sum = 0
-  for (let i = 9; i < 10 ** 6; i++) {
-    const sumFifth = Array.from(i.toString())
-      .map(i => i ** 5)
-      .reduce((a, b) => a + b, 0)
-    if (sumFifth === i) {
-      sum += i
-    }
-  }
-  return sum
+
+  
 }
-console.log(sumOfPentagonalNumbers())
+console.log(easyKnapsack(200, [1, 2, 5, 20, 50, 100]))
