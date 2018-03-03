@@ -13,12 +13,22 @@ How many different ways can £2 be made using any number of coins?
  * aka the easiest knapsack problem
  *
  * @param {Number} sum - target
- * @param {Number[]} values - sorted from lowest to highest
+ * @param {Number[]} values - sorted from highest to lowest
  *
  * @returns {Number} number of distinct ways of forming sum from values
  */
 function easyKnapsack(sum, values) {
-
-  
+  let ways = [1].concat(Array(sum).fill(0))
+  for (let i = 0; i < values.length; i++) {
+    for (let j = values[i]; j <= sum; j++) {
+      ways[j] += ways[j - values[i]]
+    }
+  }
+  return ways[sum]
 }
-console.log(easyKnapsack(200, [1, 2, 5, 20, 50, 100]))
+console.log(easyKnapsack(200, [1, 2, 5, 10, 20, 50, 100, 200]))
+
+// takes only 1/4 of a millisecond!
+// console.time('ai')
+// easyKnapsack(200, [1, 2, 5, 10, 20, 50, 100, 200])
+// console.timeEnd('ai')
