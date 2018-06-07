@@ -17,16 +17,12 @@ const intArray = require('../helpers/intArray')
  * @returns {number}
  */
 function sumOfMultiples(multiples, ceiling) {
-    return intArray(ceiling)
-        .filter(i => {
-            for (let m of multiples) {
-                if (i % m === 0) {
-                    return true
-                }
-            }
-            return false
-        })
-        .reduce((l, r) => l + r, 0)
+  return intArray(ceiling - 1)
+    .filter(i => multiples.some(m => i % m === 0))
+    .reduce((l, r) => l + r, 0)
 }
 
+console.log(sumOfMultiples([3, 5], 10))
+console.time('sumOfMultiples')
 console.log(sumOfMultiples([3, 5], 1000))
+console.timeEnd('sumOfMultiples')
